@@ -1,8 +1,8 @@
 var time = moment();
-var info = $("<textarea>");
+var info = document.querySelector(".information");
 var currentHour = document.querySelector("hour");
 // Timer Header
-$("#currentDay").text(time.format("MMMM Do YYYY, h:mm a"));
+$("#currentDay").text(time.format("MMMM Do YYYY, h:mm:ss A"));
 //--------------------------------------------------------
 // create an array of objects for the available hour and plan
 var savedPlan = [
@@ -97,7 +97,6 @@ $(document).ready(function() {
             init();
 
         });
-        savedData.textContent(info)
 });
 
 
